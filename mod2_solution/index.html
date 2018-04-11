@@ -39,7 +39,7 @@
          Buy {{item.quantity}} {{item.name}}
          <button ng-click="list1.buyItem($index);" class="btn btn-default"><span class="glyphicon glyphicon-ok"></span> Bought</button>
      </ul>
-     <!-- <div ng-show="list1.isEmpty();" class="emptyMessage">Everything is bought!</div> -->
+     <div ng-show="list1.isEmpty();" class="emptyMessage">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
@@ -48,7 +48,7 @@
      <ul>
        <li ng-repeat="item in list2.items">Bought {{item.quantity}} {{item.name}}</li>
      </ul>
-     <!-- <div ng-show="list2.isEmpty();" class="emptyMessage">Nothing bought yet.</div> -->
+     <div ng-show="list2.isEmpty();" class="emptyMessage">Nothing bought yet.</div>
     </div>
 
   </div>

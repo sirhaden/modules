@@ -20,11 +20,9 @@ function ToBuyController(ShoppingListCheckOff) {
 
   list1.items = ShoppingListCheckOff.getItemsToBuy();
 
-  list1.isEmpty = ShoppingListCheckOff.getItemsToBuy().length == 0;
-
-  // list1.isEmpty = function() {
-  //     return (list1.items.length == 0 ? true : false);
-  // }
+  list1.isEmpty = function() {
+      return (ShoppingListCheckOff.getItemsToBuy().length == 0 ? true : false);
+  }
 
   list1.buyItem = function (itemIndex) {
     ShoppingListCheckOff.buyItem(itemIndex);
@@ -38,11 +36,9 @@ function AlreadyBoughtController(ShoppingListCheckOff) {
 
   list2.items = ShoppingListCheckOff.getItemsBought();
 
-  list2.isEmpty = ShoppingListCheckOff.getItemsBought().length == 0;
-
-  // list2.isEmpty = function() {
-  //     return (list2.items.length == 0 ? true : false);
-  // };
+  list2.isEmpty = function() {
+      return (ShoppingListCheckOff.getItemsBought().length == 0 ? true : false);
+  };
 }
 
 // Service - ShoppingListCheckOffService
